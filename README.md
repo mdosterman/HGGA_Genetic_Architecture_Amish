@@ -1,0 +1,1 @@
+The files here contain code used to perform GRS and PRS calculation in addition to data analysis for the Osterman et al. (2022) paper in Human Genetics and Genomices Advances, titled "The genetic architecture of Alzheimer disease risk in the Ohio and Indiana Amish."
