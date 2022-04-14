@@ -1,0 +1,50 @@
+## PRS Calculation Script
+
+Rscript PRSice.R --dir [directory] \
+    --prsice [file location] \
+    --type bgen \
+    --base Jansen_Sum_Stats_no_APOE_region.txt \
+    --target Merged_chr# \
+    --thread 1 \
+    --chr-id c:l:a:b --chr CHR --A1 A1 --A2 A2 --stat OR --bp BP --pvalue P --snp MarkerName \
+    --pheno PHENO_Merged_75.txt --pheno-col dx \
+    --nonfounders \
+    --binary-target T \
+    --all-score \
+    --or \
+    --print-snp \
+    --out PRS_Age_75
+
+## GRS Calculation Script
+
+Rscript PRSice.R --dir [directory] \
+    --prsice [file location] \
+    --type bgen \
+    --base Jansen_Sig_no_APOE.txt \
+    --target Merged_chr# \
+    --thread 1 \
+    --chr-id c:l:a:b --chr CHR --A1 A1 --A2 A2 --stat OR --bp BP --pvalue P --snp MarkerName \
+    --pheno PHENO_Merged_75.txt --pheno-col dx \
+    --nonfounders \
+    --binary-target T \
+    --all-score \
+    --or \
+    --print-snp \
+    --out GRS_Age_75
+
+## PRS with CI as Outcome
+
+Rscript PRSice.R --dir [directory] \
+    --prsice [file location] \
+    --type bgen \
+    --base Jansen_Sum_Stats_no_APOE_region.txt \
+    --target Merged_chr# \
+    --thread 1 \
+    --chr-id c:l:a:b --chr CHR --A1 A1 --A2 A2 --stat OR --bp BP --pvalue P --snp MarkerName \
+    --pheno PHENO_Merged_75_CI.txt --pheno-col dx \
+    --nonfounders \
+    --binary-target T \
+    --all-score \
+    --or \
+    --print-snp \
+    --out PRS_Age_75_CI
